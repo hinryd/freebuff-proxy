@@ -11,7 +11,8 @@ services:
     image: ghcr.io/hengxin666/freebuff-proxy:latest
     container_name: freebuff-proxy
     restart: unless-stopped
-    network_mode: host
+    network_mode: 
+      - dokploy-network
     environment:
       FREEBUFF_PROXY_DATA_DIR: /data
       FREEBUFF_PROXY_CONFIG: /data/config.yaml
